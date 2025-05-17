@@ -1,5 +1,6 @@
 ﻿using System.Text;
 using System.Windows;
+using TranquilTurtle.Services;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -19,6 +20,8 @@ namespace TranquilTurtle
         public MainWindow()
         {
             InitializeComponent();
+            //Example: Close whatsApp Desktop if are open
+            AppBlockerService.KillApp("WhatsApp");
         }
     }
 }
