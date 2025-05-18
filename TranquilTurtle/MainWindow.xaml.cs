@@ -1,27 +1,42 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows;
-using TranquilTurtle.Services;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using TranquilTurtle.Views;
+using TranquilTurtle.Models;
+using TranquilTurtle.Presenters;
+//using TranquilTurtle.Services;
 
 namespace TranquilTurtle
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, IMainView
     {
+
+        private MainPresenter presenter;
         public MainWindow()
         {
             InitializeComponent();
+            presenter = new MainPresenter(this, new BlockedAppsModel());
             //Example: Close whatsApp Desktop if are open
-            AppBlockerService.KillApp("WhatsApp");
+            //AppBlockerService.KillApp("WhatsApp");
+        }
+
+
+        // Implementing IMainView
+        public string ProcessNameInput => TbProcessName.Text;
+
+        public event EventHandler BlockAppClicked;
+        public event EventHandler LoadBlockedAppsClicked;
+        private void BlockApp_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void LoadBlockedApps_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
