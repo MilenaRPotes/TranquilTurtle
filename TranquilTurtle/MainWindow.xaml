@@ -8,15 +8,31 @@
         Title="MainWindow" Height="350" Width="300">
     <Grid>
         <StackPanel Margin="20">
+            <!--Instructions-->
             <TextBlock Text="Enter Process name to close" Margin="0,0,0,10" HorizontalAlignment="Center"></TextBlock>
-            <TextBlock x:Name="TbProcessName" Width="200" Margin="0,0,0,10"
-                       Background="pink"></TextBlock>
+            <!--Field to write the process name-->
+            <TextBox x:Name="TbProcessName" Height="20" Width="200" Margin="0,0,0,10"
+                       Background="#9DE4FF"></TextBox>
+            <!--#region Main Buttons -->
             <Button Content="Block App" Width="100" Click="BlockApp_Click" Margin="0,0,0,10" ></Button>
             <Button Content="Load Blocked Apps" Width="150" Click="LoadBlockedApps_Click" ></Button>
+            <!--#endregion-->
+            <!--Blocked Apps List-->
             <ListBox x:Name="BlockedAppsListBox" Height="100" Margin="0,20,0,0"></ListBox>
-            <TextBlock x:Name="StatustText" Margin="0,10,0,0"></TextBlock>
+
+            <!--#region DELETE & EDIT BUTTONS -->
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" HorizontalAlignment="Center">
+                <Button  Content="Edit Selected" Width="75" Height="30" Click="EditSelected_Click" Margin="5" FontSize="9"></Button>
+                <Button  Content="Delete Selected" Width="75" Height="30" Margin="5" FontSize="9" Click="DeleteSelected_Click"  ></Button>
+            </StackPanel>
+            <!--#endregion-->
+            
+            <!--Status-->
+            <TextBlock x:Name="TbStatust" Margin="0,10,0,0"></TextBlock>
             
         </StackPanel>
+
+      
 
     </Grid>
 </Window>

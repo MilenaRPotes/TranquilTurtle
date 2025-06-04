@@ -21,6 +21,8 @@ namespace TranquilTurtle.Presenters
 
             this.view.BlockAppClicked += OnBlockAppClicked;
             this.view.LoadBlockedAppsClicked += OnLoadBlockedAppsClicked;
+            this.view.EditAppClicked += OnEditAppClicked;
+            this.view.DeleteAppClicked += OnDeleteAppClicked;
         }
 
         private void OnBlockAppClicked(object? sender, EventArgs e)
@@ -35,8 +37,8 @@ namespace TranquilTurtle.Presenters
 
             AppBlockerService.KillApp(processName);
             model.AddBlockedApp(processName);
-
-            view.SetStatus($"Tried to close and saved: {processName}");
+            view.SetBlockedAppList(model.GetBlockedApps());
+            view.SetStatus($"Blocked and saved: {processName}");
         }
 
         private void OnLoadBlockedAppsClicked(object sender, EventArgs e)
@@ -45,5 +47,22 @@ namespace TranquilTurtle.Presenters
             view.SetBlockedAppList(apps);
             view.SetStatus($"Loaded{apps.Count} blocked apps.");
         }
+
+        private void OnEditAppClicked(object? sender, EventArgs e) 
+        { 
+            var selected = view.SelectedApp;
+            if (string.IsNullOrEmpty(selected)) 
+            {
+                view.SetStatus("Please select an app to edit.");
+                return;
+            }
+
+            //var dialog = new InputDialog(selected);
+
+        }
+
+        private void 
+
+
     }
 }
