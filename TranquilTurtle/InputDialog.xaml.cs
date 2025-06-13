@@ -15,12 +15,13 @@ namespace TranquilTurtle
 
         private void OkButton_Click(object sender, RoutedEventArgs e)
         {
-
+            ResponseText = InputTextBox.Text;
+            DialogResult = true;
         }
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-
+            DialogResult = false;
         }
     }
 }

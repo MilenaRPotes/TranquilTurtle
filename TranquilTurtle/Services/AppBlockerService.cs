@@ -9,14 +9,17 @@ namespace TranquilTurtle.Services
 {
     public static class AppBlockerService
     {
-        public static void KillApp(string processName)
+        public static bool KillApp(string processName)
         {
+            bool anyClosed = false;
+
             try 
             {
             var processes = Process.GetProcessesByName(processName);
                 foreach (var process in processes) 
                 { 
                     process.Kill();
+                    anyClosed = true;
                 }
             
             }
@@ -24,12 +27,7 @@ namespace TranquilTurtle.Services
             { 
                 Debug.WriteLine($"Error closing app: {ex.Message}");
             }
-            
-        
-        
-        
+            return anyClosed;
         }
-
-
     }
 }

@@ -8,4 +8,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Assets\FocusTurtle.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\FocusTurtle.png" />
+  </ItemGroup>
+
 </Project>

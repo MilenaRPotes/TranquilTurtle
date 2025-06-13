@@ -4,6 +4,8 @@ using System.Windows;
 using TranquilTurtle.Views;
 using TranquilTurtle.Models;
 using TranquilTurtle.Presenters;
+using System.Windows.Threading;
+using System.Windows.Controls;
 //using TranquilTurtle.Services;
 
 namespace TranquilTurtle
@@ -17,8 +19,11 @@ namespace TranquilTurtle
         public event EventHandler LoadBlockedAppsClicked;
         public event EventHandler EditAppClicked;
         public event EventHandler DeleteAppClicked;
+        public event EventHandler StartTimerClicked;
 
         private MainPresenter presenter;
+        //private DispatcherTimer uiCountdownTimer;
+        //private TimeSpan remainingTime;
         public MainWindow()
         {
             InitializeComponent();
@@ -45,12 +50,50 @@ namespace TranquilTurtle
             TbStatust.Text = message;
         }
 
-       
+        public TimeSpan GetTimerDuration()
+        {
+            if (TimerComboBox.SelectedItem is ComboBoxItem selectedItem && int.TryParse(selectedItem.Tag.ToString(), out int minutes)) 
+            { 
+                return TimeSpan.FromMinutes(minutes);
+            
+            }
 
+            return TimeSpan.FromMinutes(1); // default fallback
+        }
+
+        public void ShowBlockingUI(TimeSpan duration) 
+        {
+
+            FocusBlockerWindow blockerWindow = new FocusBlockerWindow(duration, this);
+            
+            blockerWindow.Show();
+            this.Hide();
+
+            //var focuswindow = new FocusBlockerWindow(duration,this);
+            //focuswindow.Show();
+
+            //this.Hide();
+
+        }
+
+   
+
+        public void HideBlockingUI() 
+        {
+            SetStatus("Focus session completed. Well done!");
+
+        }
+
+
+
+
+        #region trigger events to Presenter 
         //Button events that trigger events to Presenter 
         private void BlockApp_Click(object sender, RoutedEventArgs e)
         {
             BlockAppClicked?.Invoke(this, EventArgs.Empty);
+
+            StartTimerClicked?.Invoke(this, EventArgs.Empty);
         }
 
         private void LoadBlockedApps_Click(object sender, RoutedEventArgs e)
@@ -67,5 +110,6 @@ namespace TranquilTurtle
         {
             DeleteAppClicked?.Invoke(this, EventArgs.Empty);
         }
+        #endregion
     }
 }
