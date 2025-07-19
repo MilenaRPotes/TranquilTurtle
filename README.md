@@ -6,13 +6,13 @@ Its goal is to help users block distractions temporarily and encourage mindful b
 ---
 
 ## 🌟 Features
-✅ App blocking timer with countdown  
-🐢 Turtle image for a calming effect
-🕐 Customizable duration via ComboBox  
-🪟 Unclosable window during timer (only minimizable)  
-🔁 Automatic return to the main screen after time ends  
-🧭 Separated views and presenters for clean logic  
-🎨 Custom UI with static resources and clean layout  
+- ✅ App blocking timer with countdown  
+- 🐢 Turtle image for a calming effect
+- 🕐 Customizable duration via ComboBox  
+- 🪟 Unclosable window during timer (only minimizable)  
+- 🔁 Automatic return to the main screen after time ends  
+- 🧭 Separated views and presenters for clean logic  
+- 🎨 Custom UI with static resources and clean layout  
 
 ---
 
@@ -34,7 +34,7 @@ Its goal is to help users block distractions temporarily and encourage mindful b
 - 🧱 Model-View-Presenter (MVP) Architecture  
 - 📦 DispatcherTimer for real-time updates  
 - 🌈 Custom XAML styles and separated logic  
-- 🐢 Static image-based animation for visual engagement  
+- 🐢 Static image for visual engagement  
 
 ---
 
