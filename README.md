@@ -17,13 +17,15 @@ Its goal is to help users block distractions temporarily and encourage mindful b
 ---
 
 ## 🛠 How It Works
-1️⃣ Run the app as Administrator (required to close other apps)
-2️⃣ Enter the name of the application you want to block (e.g., chrome, discord, etc.)
-3️⃣ Select the desired blocking time from the dropdown
-4️⃣ Click "Block App" to begin the session
-5️⃣ A new window opens with a countdown and a focused turtle
-6️⃣ While the countdown is active, the selected app will remain closed
-7️⃣ When the timer ends, the main window returns and the app can be used again
+
+- 1️⃣ Run the app as Administrator (required to close other apps)
+- 2️⃣ Enter the name of the application you want to block (e.g., chrome, discord, etc.)
+- 3️⃣ Select the desired blocking time from the dropdown
+- 4️⃣ Click "Block App" to begin the session
+- 5️⃣ A new window opens with a countdown and a focused turtle
+- 6️⃣ While the countdown is active, the selected app will remain closed
+- 7️⃣ When the timer ends, the main window returns and the app can be used again
+
 ---
 
 ## 🖥️ Technologies
