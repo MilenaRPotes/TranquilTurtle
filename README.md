@@ -48,7 +48,7 @@ This is **v1** of the **Tranquil Turtle** app.
 
 <p align="center">
   <img src="https://github.com/MilenaRPotes/TranquilTurtle/blob/main/FocusImage.png" width="45%" />
-  <img src="https://github.com/MilenaRPotes/TranquilTurtle/blob/main/CountdownImage.png" width="45%" />
+  <img src="https://github.com/MilenaRPotes/TranquilTurtle/blob/main/FocusImage2.png" width="45%" />
 </p>
 
 ---
