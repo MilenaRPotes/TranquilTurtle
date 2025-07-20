@@ -47,9 +47,10 @@ This is **v1** of the **Tranquil Turtle** app.
 
 
 <p align="center">
-  <img src="https://github.com/MilenaRPotes/TranquilTurtle/blob/main/FocusImage.png" width="45%" />
-  <img src="https://github.com/MilenaRPotes/TranquilTurtle/blob/main/FocusImage2.png" width="45%" />
+  <img src="https://github.com/MilenaRPotes/TranquilTurtle/blob/main/FocusImage.png" height="300px" style="border-radius: 10px; margin-right: 10px;" />
+  <img src="https://github.com/MilenaRPotes/TranquilTurtle/blob/main/FocusImage2.png" height="300px" style="border-radius: 10px;" />
 </p>
+
 
 ---
 
