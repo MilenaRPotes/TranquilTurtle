@@ -45,7 +45,7 @@ This is **v1** of the **Tranquil Turtle** app.
 
 ## 📸 Preview
 
-![Tranquil Turtle UI](https://github.com/MilenaRPotes/TranquilTurtle/blob/main/Assets/TranquilTurtlePreview.png)
+![Tranquil Turtle UI](https://github.com/MilenaRPotes/TranquilTurtle/blob/main/FocusImage.png)
 
 ---
 
