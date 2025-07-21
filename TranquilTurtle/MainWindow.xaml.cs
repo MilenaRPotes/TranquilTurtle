@@ -53,12 +53,13 @@ namespace TranquilTurtle
         public TimeSpan GetTimerDuration()
         {
             if (TimerComboBox.SelectedItem is ComboBoxItem selectedItem && int.TryParse(selectedItem.Tag.ToString(), out int minutes)) 
-            { 
+            {
+               //MessageBox.Show($"Duración seleccionada: {minutes} minutos");
                 return TimeSpan.FromMinutes(minutes);
-            
             }
 
             return TimeSpan.FromMinutes(1); // default fallback
+
         }
 
         public void ShowBlockingUI(TimeSpan duration) 

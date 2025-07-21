@@ -90,7 +90,7 @@ namespace TranquilTurtle.Presenters
             view.ShowBlockingUI(duration);
 
             backgroundBlockerTimer = new DispatcherTimer();
-            backgroundBlockerTimer.Interval = TimeSpan.FromSeconds(2);
+            backgroundBlockerTimer.Interval = TimeSpan.FromSeconds(3);
             backgroundBlockerTimer.Tick += (s, e) => 
             {
                 if (DateTime.Now >= blockEndTime) 
